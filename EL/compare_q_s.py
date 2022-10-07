@@ -1,3 +1,4 @@
+#%%
 from multiprocessing import Pool
 from collections import defaultdict
 import gym
@@ -47,8 +48,8 @@ class CompareAgent(ELAgent):
             else:
                 self.log(reward)
 
-            if e != 0 and e % report_interval == 0:
-                self.show_reward_log(episode=e)
+            #if e != 0 and e % report_interval == 0:
+            #    self.show_reward_log(episode=e)
 
 
 def train(q_learning):
@@ -58,8 +59,10 @@ def train(q_learning):
     return dict(agent.Q)
 
 
-if __name__ == "__main__":
-    with Pool() as pool:
-        results = pool.map(train, ([True, False]))
-        for r in results:
-            show_q_value(r)
+#if __name__ == "__main__":
+with Pool() as pool:
+    results = pool.map(train, ([True, False]))
+    for r in results:
+        show_q_value(r)
+
+# %%
