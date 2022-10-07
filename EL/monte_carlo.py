@@ -1,3 +1,4 @@
+#%%
 import math
 from collections import defaultdict
 import gym
@@ -58,5 +59,7 @@ def train():
     agent.show_reward_log()
 
 
-if __name__ == "__main__":
-    train()
+#if __name__ == "__main__":
+train()
+
+# %%

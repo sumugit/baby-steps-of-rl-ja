@@ -22,6 +22,7 @@ class ELAgent():
         self.reward_log = []
 
     def log(self, reward):
+        """ 報酬の記録 """
         self.reward_log.append(reward)
 
     def show_reward_log(self, interval=50, episode=-1):
