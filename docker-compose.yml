@@ -1,0 +1,16 @@
+version: '3'
+services:
+  jupyterlab:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rl-ja
+    working_dir: '/baby-steps-of-rl-ja'
+    tty: true
+    volumes:
+      - ./:/baby-steps-of-rl-ja
+    ports: 
+      - "8888:8888"
+      - "8080:8080"
+    command: jupyter-lab --ip 0.0.0.0 --port=8080 --allow-root --no-browser
