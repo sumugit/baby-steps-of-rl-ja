@@ -1,3 +1,4 @@
+#%%
 import random
 import argparse
 import numpy as np
@@ -7,6 +8,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.externals import joblib
 import gym
 from fn_framework import FNAgent, Trainer, Observer
+#%%
 
 
 class ValueFunctionAgent(FNAgent):
@@ -120,3 +122,5 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     main(args.play)
+
+# %%

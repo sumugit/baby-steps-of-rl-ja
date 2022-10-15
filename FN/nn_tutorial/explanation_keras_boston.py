@@ -1,3 +1,4 @@
+#%%
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_boston
@@ -32,3 +33,5 @@ limit = np.max(y_test)
 
 result.plot.scatter(x="actual", y="predict", xlim=(0, limit), ylim=(0, limit))
 plt.show()
+
+# %%

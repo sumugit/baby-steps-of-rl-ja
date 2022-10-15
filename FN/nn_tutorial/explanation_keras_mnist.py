@@ -1,3 +1,4 @@
+#%%
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_digits
@@ -34,3 +35,5 @@ predicts = model.predict(X_test)
 predicts = np.argmax(predicts, axis=1)
 actual = np.argmax(y_test, axis=1)
 print(classification_report(actual, predicts))
+
+# %%
