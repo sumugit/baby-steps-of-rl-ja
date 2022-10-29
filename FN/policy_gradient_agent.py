@@ -1,3 +1,4 @@
+#%%
 import os
 import random
 import argparse
@@ -52,6 +53,8 @@ class PolicyGradientAgent(FNAgent):
         print("Done initialization. From now, begin training!")
 
     def set_updater(self, optimizer):
+        """パラメータの更新
+        """
         actions = tf.compat.v1.placeholder(shape=(None), dtype="int32")
         rewards = tf.compat.v1.placeholder(shape=(None), dtype="float32")
         one_hot_actions = tf.one_hot(actions, len(self.actions), axis=1)
@@ -157,10 +160,12 @@ def main(play):
         trained.save(path)
 
 
-if __name__ == "__main__":
+if __name__ =="__main__":
     parser = argparse.ArgumentParser(description="PG Agent")
     parser.add_argument("--play", action="store_true",
                         help="play with trained model")
 
     args = parser.parse_args()
     main(args.play)
+
+# %%
